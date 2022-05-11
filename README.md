@@ -2,7 +2,7 @@
 
 Some shaders for [Media Player Classic - BE](https://sourceforge.net/projects/mpcbe/).
 
-为MPC-BE设计的若干个着色器（shader）。
+为[MPC-BE](https://sourceforge.net/projects/mpcbe/)设计的若干个着色器（shader）。
 
 ## 背景
 
@@ -21,22 +21,21 @@ Some shaders for [Media Player Classic - BE](https://sourceforge.net/projects/mp
 1. 竖屏转横屏-阵列 3x1.hlsl
    
    ![!](img/s1.jpg)
+
 2. 竖屏转横屏-阵列 5x2.hlsl
    ![!](img/s2.jpg)
+
 3. 竖屏转横屏-中心强调.hlsl
    ![!](img/s3.jpg)
 
-
-
 ### 使用
 
-由于MPC-BE的着色器无法变更输出的长宽尺寸，因此必须先通过快捷键或者菜单调整视频画面为拉升模式，然后在着色器中添加需要的着色器效果。
+1. 由于MPC-BE的着色器无法变更输出的长宽尺寸，因此在应用竖屏转横屏模式的着色器之前，必须先通过快捷键或者菜单调整视频画面为拉升模式。
 
-![](A:\ProjectOthers\mpc-shader\MPC-Shader\img\s0.jpg)
+![](img/s0.jpg)
 
-
-
-
+2. 在菜单中选择着色器-选择着色器-中添加需要的着色器效果，注意勾选“启用”，此时着色器已经生效，点击确定完成保存。
+   ![](img/select_shader.jpg)
 
 ### 参考
 
