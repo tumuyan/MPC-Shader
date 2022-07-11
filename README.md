@@ -21,10 +21,10 @@ Some shaders for [Media Player Classic - BE](https://sourceforge.net/projects/mp
 本仓库已经给出了解决方案。包含了如下几个shader：
 
 1. 竖屏转横屏-阵列单行-带黑边.hlsl
-   ![!](img/s5.jpg)
+   ![!](img/s5.png)
 
 2. 竖屏转横屏-阵列单行-无黑边.hlsl
-   ![!](img/s4.jpg)
+   ![!](img/s4.png)
    
 3. 竖屏转横屏-阵列 5x2.hlsl
    ![!](img/s2.jpg)
@@ -33,6 +33,7 @@ Some shaders for [Media Player Classic - BE](https://sourceforge.net/projects/mp
    ![!](img/s3.jpg)
 
 ### 参数
+竖屏转横屏-阵列单行支持如下参数
 ````cpp
 #define screen_width 1920 		// 播放器宽度
 #define screen_height 1080		// 播放器高度
