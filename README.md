@@ -20,16 +20,27 @@ Some shaders for [Media Player Classic - BE](https://sourceforge.net/projects/mp
 
 本仓库已经给出了解决方案。包含了如下几个shader：
 
-1. 竖屏转横屏-阵列 3x1.hlsl
-   
-   ![!](img/s1.jpg)
+1. 竖屏转横屏-阵列单行-带黑边.hlsl
+   ![!](img/s5.jpg)
 
-2. 竖屏转横屏-阵列 5x2.hlsl
+2. 竖屏转横屏-阵列单行-无黑边.hlsl
+   ![!](img/s4.jpg)
+   
+3. 竖屏转横屏-阵列 5x2.hlsl
    ![!](img/s2.jpg)
 
-3. 竖屏转横屏-中心强调.hlsl
+4. 竖屏转横屏-中心强调.hlsl
    ![!](img/s3.jpg)
-   
+
+### 参数
+````cpp
+#define screen_width 1920 		// 播放器宽度
+#define screen_height 1080		// 播放器高度
+#define black_border false		// 阵列单行是否保留一定的黑边
+````
+
+
+
    
 ## 事件二：摇摆器（镜头摇晃）
 
@@ -63,7 +74,7 @@ Some shaders for [Media Player Classic - BE](https://sourceforge.net/projects/mp
    ![](img/s0.jpg)
 
 2. 在菜单中选择着色器-选择着色器-中添加需要的着色器效果，注意勾选“启用”，此时着色器已经生效，点击确定完成保存。
-   ![](img/select_shader.jpg)
+   ![](img/select_shader.png)
 
 ## 参考
 
