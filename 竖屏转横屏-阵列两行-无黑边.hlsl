@@ -5,8 +5,8 @@ float4 p1 :  register(c1);
 
 #define screen_width	1920
 #define screen_height	1080
-#define split_v			1
-#define black_border	true
+#define split_v			2
+#define black_border	false
 
 #define width   (p0[0])
 #define height  (p0[1])

@@ -23,11 +23,11 @@ Some shaders for [Media Player Classic - BE](https://sourceforge.net/projects/mp
 1. 竖屏转横屏-阵列单行-带黑边.hlsl
    ![!](img/s5.png)
 
-2. 竖屏转横屏-阵列单行-无黑边.hlsl
+2. 竖屏转横屏-阵列单行-无黑边.hlsl （事实上与上一个仅有black_border参数的区别）
    ![!](img/s4.png)
    
-3. 竖屏转横屏-阵列 5x2.hlsl
-   ![!](img/s2.jpg)
+3. 竖屏转横屏-阵列两行-无黑边.hlsl （事实上与上一个仅有split_v参数的区别）
+   ![!](img/s6.png)
 
 4. 竖屏转横屏-中心强调.hlsl
    ![!](img/s3.jpg)
@@ -37,6 +37,7 @@ Some shaders for [Media Player Classic - BE](https://sourceforge.net/projects/mp
 ````cpp
 #define screen_width 1920 		// 播放器宽度
 #define screen_height 1080		// 播放器高度
+#define split_v 1				// 纵向阵列画面数量
 #define black_border false		// 阵列单行是否保留一定的黑边
 ````
 
@@ -65,6 +66,23 @@ Some shaders for [Media Player Classic - BE](https://sourceforge.net/projects/mp
 #define amp_x 0.03          // 横向移动比例，应设置为0-0.5之间（实际上0.5已经把图像完全移动到播放器外了
 #define amp_y 0.08          // 纵向移动比例，应设置为0-0.5之间（实际上0.5已经把图像完全移动到播放器外了
 #define remove_border true  // 是否通过放大画面来去除移动镜头产生的黑边
+````
+
+
+## 事件三：裁切伪横屏视频
+
+### 事件
+
+一些竖屏视频通过水平复制画面的方式强行制作为横屏视频，播放器能否还原原本的竖屏画面呢？事实上MPC-BE右键-视频画面-缩放以填满窗口，然后调整窗口尺寸即可。
+但是能否在全屏播放的前提下，还原原本的竖屏画面呢？
+
+### 方案
+本仓库已经给出了解决方案：`裁切伪横屏视频.hlsl` ，** 注意此着色器需应用为预调整大小像素着色器**，中心的一倍画面正常显示，其余部分显示为纯黑色
+
+### 参数
+竖屏转横屏-阵列单行支持如下参数
+````cpp
+#define split 3		// 画面水平切分为几份（即只显示原画面的几分之一）
 ````
 
 
