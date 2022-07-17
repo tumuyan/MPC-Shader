@@ -86,6 +86,16 @@ Some shaders for [Media Player Classic - BE](https://sourceforge.net/projects/mp
 ````
 
 
+## 其他：
+
+### 红蓝通道分离  
+```
+#define amp 5 // 通道偏离的像素数量
+```
+![](img/s4.jpg)
+
+
+
 ## 使用方法
 
 1. 由于MPC-BE的着色器无法变更输出的长宽尺寸，因此在应用竖屏转横屏模式的着色器之前，必须先通过快捷键或者菜单调整视频画面为拉升模式。
